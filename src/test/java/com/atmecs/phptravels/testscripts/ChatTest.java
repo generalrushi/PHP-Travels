@@ -20,7 +20,7 @@ public class ChatTest extends BaseTest {
 
 	@Test(dataProvider = "Data", dataProviderClass = DataProviderClass.class)
 
-	public void startChat(String name, String email, String whatsapp) throws InterruptedException {
+	public void Chat(String name, String email, String whatsapp) throws InterruptedException {
 		locators = PropertyReader.readProperties(Constants.Locator_file);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
@@ -29,13 +29,13 @@ public class ChatTest extends BaseTest {
 		WebDriverWait wait = new WebDriverWait(driver, 40);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locators.getProperty("ChatWidget"))));
 
-		ElementHelpers.jsClick(driver, locators.getProperty("ChatWidget"));
+		
 		ElementHelpers.sendKeyById(driver, locators.getProperty("NameData"), name);
 		ElementHelpers.ElementSendKeys(driver, locators.getProperty("WhatsApp"), whatsapp);
 		ElementHelpers.sendKeyById(driver, locators.getProperty("EmailData"), email);
 
 		ElementHelpers.selectFromDropDown(driver, locators.getProperty("Dropdown"), locators.getProperty("value"));
-		ElementHelpers.jsClick(driver, locators.getProperty("StartChat"));
+		
 
 		driver.switchTo().defaultContent();
 

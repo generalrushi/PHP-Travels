@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.atmecs.phptravels.testscripts.Chatbot">
+      <class name="com.atmecs.phptravels.testscripts.ChatTest">
         <methods>
-          <include name="closeBrowser"/>
           <include name="startChat"/>
+          <include name="closeBrowser"/>
           <include name="invokeBrowser"/>
         </methods>
-      </class> <!-- com.atmecs.phptravels.testscripts.Chatbot -->
+      </class> <!-- com.atmecs.phptravels.testscripts.ChatTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

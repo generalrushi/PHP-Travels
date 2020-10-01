@@ -36,12 +36,5 @@ public class ElementHelpers {
 		choose.selectByValue(value);
 	}
 
-	public static void jsClick(WebDriver driver, String xpath) {
-
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		WebElement button = driver.findElement(By.xpath(xpath));
-
-		js.executeScript("arguments[0].click();", button);
-
-	}
+	
 }
